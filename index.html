@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechLab - narzędzia technika informatyka</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="kontener">
+      <h1>Tech<span>Lab</span></h1>
+      <nav>
+        <a href="#podsieci">Podsieci</a>
+        <a href="#liczby">Konwerter</a>
+        <a href="#porty">Porty</a>
+        <a href="#quiz">Quiz</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="baner">
+    <div class="kontener">
+      <h2>Narzędzia dla technika informatyka</h2>
+      <p>Mała strona z rzeczami, które przydają się w szkole i na egzaminie zawodowym: adresacja IP, systemy liczbowe, numery portów i quiz sprawdzający wiedzę.</p>
+      <a class="przycisk" href="#quiz">Zacznij quiz</a>
+    </div>
+  </section>
+
+  <main class="kontener">
+
+    <!-- KALKULATOR PODSIECI -->
+    <section id="podsieci">
+      <h2>Kalkulator podsieci IPv4</h2>
+      <p class="opis">Wpisz adres IP i długość prefiksu (np. 24 dla maski 255.255.255.0), a program policzy resztę.</p>
+
+      <div class="karta">
+        <div class="formularz">
+          <label for="ip">Adres IP</label>
+          <input type="text" id="ip" value="192.168.10.37">
+
+          <label for="prefiks">Prefiks (1-30)</label>
+          <input type="number" id="prefiks" value="26" min="1" max="30">
+
+          <button id="przyciskPodsieci">Oblicz</button>
+        </div>
+
+        <p id="bladPodsieci" class="blad"></p>
+        <table id="wynikPodsieci" class="tabela"></table>
+      </div>
+    </section>
+
+    <!-- KONWERTER -->
+    <section id="liczby">
+      <h2>Konwerter systemów liczbowych</h2>
+      <p class="opis">Wybierz system, w którym wpisujesz liczbę, i kliknij Przelicz.</p>
+
+      <div class="karta">
+        <div class="formularz">
+          <label for="liczba">Liczba</label>
+          <input type="text" id="liczba" value="192">
+
+          <label for="system">System wejściowy</label>
+          <select id="system">
+            <option value="10">dziesiętny (10)</option>
+            <option value="2">binarny (2)</option>
+            <option value="8">ósemkowy (8)</option>
+            <option value="16">szesnastkowy (16)</option>
+          </select>
+
+          <button id="przyciskLiczby">Przelicz</button>
+        </div>
+
+        <p id="bladLiczby" class="blad"></p>
+        <table id="wynikLiczby" class="tabela"></table>
+      </div>
+    </section>
+
+    <!-- PORTY -->
+    <section id="porty">
+      <h2>Najważniejsze porty</h2>
+      <p class="opis">Te numery pojawiają się na egzaminie najczęściej. Warto je znać na pamięć.</p>
+
+      <div class="karta">
+        <table class="tabela">
+          <tr><th>Port</th><th>Protokół</th><th>Do czego służy</th></tr>
+          <tr><td>20, 21</td><td>FTP</td><td>przesyłanie plików</td></tr>
+          <tr><td>22</td><td>SSH</td><td>bezpieczny zdalny dostęp do konsoli</td></tr>
+          <tr><td>23</td><td>Telnet</td><td>zdalna konsola (bez szyfrowania)</td></tr>
+          <tr><td>25</td><td>SMTP</td><td>wysyłanie poczty</td></tr>
+          <tr><td>53</td><td>DNS</td><td>zamiana nazw domen na adresy IP</td></tr>
+          <tr><td>67, 68</td><td>DHCP</td><td>automatyczne nadawanie adresów IP</td></tr>
+          <tr><td>80</td><td>HTTP</td><td>strony internetowe</td></tr>
+          <tr><td>110</td><td>POP3</td><td>pobieranie poczty</td></tr>
+          <tr><td>143</td><td>IMAP</td><td>poczta na serwerze</td></tr>
+          <tr><td>443</td><td>HTTPS</td><td>strony internetowe szyfrowane</td></tr>
+          <tr><td>3306</td><td>MySQL</td><td>baza danych MySQL</td></tr>
+          <tr><td>3389</td><td>RDP</td><td>pulpit zdalny Windows</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz">
+      <h2>Quiz technika informatyka</h2>
+      <p class="opis">Zaznacz odpowiedzi i kliknij „Sprawdź wynik” na dole.</p>
+
+      <div class="karta">
+        <div id="pytania"></div>
+        <button id="przyciskQuiz">Sprawdź wynik</button>
+        <div id="wynikQuiz"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>TechLab - projekt szkolny. Strona działa bez internetu.</p>
+  </footer>
+
+  <script src="pytania.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

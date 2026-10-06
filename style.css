@@ -1,0 +1,250 @@
+/* ustawienia ogólne */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f5f9;
+  color: #1f2933;
+  line-height: 1.5;
+}
+
+.kontener {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* nagłówek */
+header {
+  background-color: #12263f;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+header .kontener {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 12px 0;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+  font-size: 24px;
+}
+
+header h1 span {
+  color: #3dd6c0;
+}
+
+nav a {
+  color: #d5e0ee;
+  text-decoration: none;
+  margin-left: 18px;
+}
+
+nav a:hover {
+  color: #3dd6c0;
+}
+
+/* baner na górze */
+.baner {
+  background-color: #1b3a5f;
+  color: white;
+  padding: 50px 0;
+}
+
+.baner h2 {
+  margin-top: 0;
+  font-size: 32px;
+}
+
+.baner p {
+  max-width: 600px;
+}
+
+.przycisk {
+  display: inline-block;
+  background-color: #3dd6c0;
+  color: #12263f;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.przycisk:hover {
+  background-color: #66e4d2;
+}
+
+/* sekcje */
+section {
+  margin-top: 40px;
+}
+
+main section:last-child {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  margin-bottom: 4px;
+  color: #12263f;
+}
+
+.opis {
+  color: #5b6b7c;
+  margin-top: 0;
+}
+
+.karta {
+  background-color: white;
+  border: 1px solid #d9e1ea;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* formularze */
+.formularz {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.formularz label {
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: -6px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  padding: 9px 10px;
+  border: 1px solid #b8c4d1;
+  border-radius: 6px;
+  font-size: 16px;
+  min-width: 180px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #3dd6c0;
+}
+
+button {
+  background-color: #1b3a5f;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #12263f;
+}
+
+.blad {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* tabele */
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.tabela th,
+.tabela td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid #e3e9f0;
+}
+
+.tabela th {
+  background-color: #eef2f7;
+}
+
+.tabela tr:hover td {
+  background-color: #f7fafc;
+}
+
+/* quiz */
+.pytanie {
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e3e9f0;
+}
+
+.pytanie p {
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.pytanie label {
+  display: block;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.dobrze {
+  color: #1e8449;
+  font-weight: bold;
+}
+
+.zle {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+#wynikQuiz {
+  margin-top: 16px;
+  font-size: 18px;
+}
+
+/* stopka */
+footer {
+  background-color: #12263f;
+  color: #a9b8c9;
+  text-align: center;
+  padding: 18px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* telefon */
+@media (max-width: 600px) {
+  nav a {
+    margin: 0 12px 0 0;
+  }
+
+  header .kontener {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .baner h2 {
+    font-size: 26px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  select {
+    width: 100%;
+  }
+}
